@@ -1,0 +1,1 @@
+function TodoCtrl(o){o.todos=[{text:"Todo Item 1",done:!1},{text:"Todo Item 2",done:!1}],o.addTodo=function(){o.todos.push({text:o.formTodoText,done:!1}),o.formTodoText=""}}
