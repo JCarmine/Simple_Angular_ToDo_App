@@ -1,4 +1,6 @@
-function TodoCtrl($scope) {
+var app = angular.module('ToDo', []);
+
+app.controller('TodoCtrl', function($scope) {
   
   $scope.todos = [
     {text:'Todo Item 1', done:false},         
@@ -8,6 +10,5 @@ function TodoCtrl($scope) {
   $scope.addTodo = function () {
     $scope.todos.push({text:$scope.formTodoText, done:false});
     $scope.formTodoText = '';
-  };
-  
-}
+  };    
+});

@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app class="no-js" lang="en">
+<html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="todo-wrapper" ng-controller="TodoCtrl">
+    <div ng-app="ToDo" ng-controller="TodoCtrl">
         <form>
             <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
             <button class="add-btn" ng-click="addTodo()">Add</button>
