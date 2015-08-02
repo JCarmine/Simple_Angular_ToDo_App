@@ -1,1 +1,1 @@
-var app=angular.module("ToDo",[]);app.controller("TodoCtrl",function(o){o.todos=[{text:"Todo Item 1",done:!1},{text:"Todo Item 2",done:!1}],o.addTodo=function(){o.todos.push({text:o.formTodoText,done:!1}),o.formTodoText=""}});
+var app=angular.module("ToDo",[]);app.controller("TodoCtrl",function(o){o.todos=[{text:"Sample to-do list item",done:!1}],o.addTodo=function(){o.todos.push({text:o.formTodoText,done:!1}),o.formTodoText=""}});

@@ -3,8 +3,7 @@ var app = angular.module('ToDo', []);
 app.controller('TodoCtrl', function($scope) {
   
   $scope.todos = [
-    {text:'Todo Item 1', done:false},         
-    {text: 'Todo Item 2', done:false}
+    {text:'Sample to-do list item', done:false},         
   ];
   
   $scope.addTodo = function () {
