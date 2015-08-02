@@ -16,9 +16,13 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div ng-app="ToDo" ng-controller="TodoCtrl">
-        <form>
-            <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
-            <button class="add-btn" ng-click="addTodo()">Add</button>
+        <form name="userForm" novalidate>
+            <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+
+                <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" name="name" class="form-control" ng-model="user.name" required/>
+                <button class="add-btn" ng-disabled="userForm.$invalid" ng-click="addTodo()">Add</button>
+
+            </div>
         </form>
         <ul>
             <li ng-repeat="todo in todos">
