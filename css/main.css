@@ -866,7 +866,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
-  background-color: #fff; }
+  background-color: #ccc; }
 
 input,
 button,
@@ -6034,49 +6034,50 @@ button.close {
 /* ==========================================================================
    Custom Styles
    ========================================================================== */
+/* Color variables */
+/* General page layout */
 .container {
   width: 100%;
   max-width: 1100px;
   padding: 0; }
 
-.done-true {
-  color: #ccc; }
-
-.add-btn:before {
-  content: "+";
-  font-weight: 800; }
-  @media screen and (min-width: 475px) {
-    .add-btn:before {
-      content: "Add To-do";
-      font-weight: 400; } }
-
-ul {
-  list-style-type: none;
-  padding-left: 0; }
-  ul li {
-    padding: 15px 0;
-    border-bottom: 1px solid #ccc; }
-
-.col-lg-12 {
+/* Form area */
+.formBox {
   padding: 15px;
   border-bottom: 1px solid #ccc;
   background-color: #f8f8f8;
   float: none; }
-
-input[type=checkbox] {
-  margin: 0 15px; }
-
-.btn-default {
-  color: #ffffff;
-  background-color: #17a68b; }
-  .btn-default[disabled] {
+  .formBox .btn-default {
+    color: #ffffff;
     background-color: #17a68b; }
-    .btn-default[disabled]:hover {
+    .formBox .btn-default[disabled] {
+      background-color: #17a68b; }
+      .formBox .btn-default[disabled]:hover {
+        background-color: #17a68b;
+        color: #ffffff; }
+    .formBox .btn-default:hover {
       background-color: #049a7e;
       color: #ffffff; }
-  .btn-default:hover {
-    background-color: #049a7e;
-    color: #ffffff; }
+  .formBox .add-btn:before {
+    content: "+";
+    font-weight: 800; }
+    @media screen and (min-width: 475px) {
+      .formBox .add-btn:before {
+        content: "Add To-do";
+        font-weight: 400; } }
+
+/* To-do list */
+ul {
+  list-style-type: none;
+  background-color: #ffffff;
+  padding-left: 0; }
+  ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc; }
+    ul li input[type=checkbox] {
+      margin: 0 15px; }
+    ul li .done-true {
+      color: #ccc; }
 
 /* ==========================================================================
    Helper Classes
