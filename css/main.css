@@ -6059,7 +6059,7 @@ button.close {
       background-color: #049a7e;
       color: #ffffff; }
   .formBox .add-btn:before {
-    content: "+";
+    content: "\002B";
     font-weight: 800; }
     @media screen and (min-width: 475px) {
       .formBox .add-btn:before {
