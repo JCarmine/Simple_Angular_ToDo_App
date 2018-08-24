@@ -23,10 +23,10 @@
 
       <!-- Form for creating new to-do item. Includes validation that prevents a new item from being created if input field is empty. -->
       <div class="col-lg-12 formBox">
-        <form class="input-group" name="addForm" ng-class="{ 'has-error' : addForm.name.$invalid && !addForm.name.$pristine }" novalidate>
+        <form class="input-group" ng-submit="addTodo()" name="addForm" ng-class="{ 'has-error' : addForm.name.$invalid && !addForm.name.$pristine }" novalidate>
           <input class="add-input form-control" placeholder="What do you need to get done?" type="text" ng-model="formTodoText" required/>
           <span class="input-group-btn">
-            <button class="btn btn-default add-btn" type="button" ng-disabled="addForm.$invalid" ng-click="addTodo()"></button>
+            <input class="btn btn-default add-btn" type="submit" ng-disabled="addForm.$invalid"></button>
           </span>
         </form>
       </div>
